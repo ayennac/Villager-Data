@@ -91,8 +91,8 @@ def all_names_by_hobby(filename):
         
     return villagers_hobby_lst
 
-file_in_question = 'villagers.csv'
-print(all_names_by_hobby(file_in_question))
+# file_in_question = 'villagers.csv'
+# print(all_names_by_hobby(file_in_question))
 
 def all_data(filename):
     """Return all the data in a file.
@@ -109,9 +109,17 @@ def all_data(filename):
 
     all_data = []
 
-    # TODO: replace this with your code
+    all_data_in_file = open(filename)
+
+    for line in all_data_in_file:
+        data_line = line.split("|")
+        data_line = tuple(data_line)
+        all_data.append(data_line)
 
     return all_data
+
+file_in_question = 'villagers.csv'
+print(all_data(file_in_question))
 
 
 def find_motto(filename, villager_name):
