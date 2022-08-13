@@ -164,5 +164,9 @@ def find_likeminded_villagers(filename, villager_name):
         >>> find_likeminded_villagers('villagers.csv', 'Wendy')
         {'Bella', ..., 'Carmen'}
     """
+    villager_set = set()
+    find_likeminded_villagers_file = open(filename)
 
-    # TODO: replace this with your code
+    for line in find_likeminded_villagers_file:
+        villager_lst = line.split("|")
+        
